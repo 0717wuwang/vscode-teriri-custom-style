@@ -356,7 +356,7 @@ div.monaco-split-view2.vertical.separator-border {
 }
 
 div.cursor.monaco-mouse-cursor-text {
-  width: 100px !important;
+  width: 3px !important;
 }
 
 /* 炫酷光标 */
