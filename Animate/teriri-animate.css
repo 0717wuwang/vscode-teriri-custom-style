@@ -321,12 +321,12 @@ div.sticky-widget {
 } */
 
 /* 鼠标悬停某些标签上的文字提示 */
-.context-view.monaco-component.top.left[style*="left"],
-.context-view.monaco-component.top.left[style*="top"] {
+/*.context-view.monaco-component.top.left[style*="left"],*/
+/*.context-view.monaco-component.top.left[style*="top"] {*/
   /* transition-property: left top;
   transition-duration: 200ms;
   transition-timing-function: ease; */
-}
+/*.}*/
 
 .context-view.monaco-component.bottom.left[style*="left"],
 .context-view.monaco-component.bottom.left[style*="top"] {
@@ -390,7 +390,7 @@ div.cursor::after {
   height: 100%;
   background: inherit;
   background-size: 100% 1000%;
-  border-radius: 30px;
+  border-radius: 3px;
   transform: scale(140%, 120%);
   filter: blur(4px) brightness(200%);
   z-index: -1;
