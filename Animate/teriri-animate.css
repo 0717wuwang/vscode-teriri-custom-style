@@ -381,7 +381,7 @@ div.cursor {
   overflow: visible !important;
 }
 div.cursor::after {
-  content: "";
+  content: "<-";
   position: absolute;
   top: 0;
   left: 0;
