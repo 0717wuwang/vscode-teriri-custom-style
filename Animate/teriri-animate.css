@@ -379,6 +379,7 @@ div.cursor {
   background-size: 100% 1000%;
   border-radius: 2px;
   overflow: visible !important;
+  cursor: "<-";
 }
 
 div.cursor::after {
