@@ -1,3 +1,5 @@
+/* 光标贝塞尔曲线 */
+
 .cursor[style*=top], .cursor[style*=left] {
   transition-property: top, left;
   transition-duration: 200ms;
