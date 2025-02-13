@@ -11,18 +11,40 @@
 .title.tabs.show-file-icons,
 .tabs-and-actions-container,
 .monaco-scrollable-element,
-.centext-view {
+.context-view {
   background-color: transparent !important;
   border-radius: 8px;
-  /* box-shadow: 0 0 2px 2px rgba(12, 0, 0, 0.1); */
+  /* box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1); */
 }
+
+/* .monaco-submenu::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: transparent !important;
+  backdrop-filter: blur(8px) brightness(120%);
+} */
 
 /* 鼠标悬停到某些标签上的提示 */
 .context-view.monaco-component {
-  border-radius: 12px !important;
+  border-radius: 4px !important;
+  box-shadow: 0 0 8px 2px rgb(32, 36, 42) !important;
+  outline: none !important;
+}
+.context-view.monaco-component::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
   background-color: rgba(40, 44, 52, 0.2) !important;
   backdrop-filter: blur(8px) brightness(120%);
-  box-shadow: 0 0 8px 2px rgb(32, 36, 42) !important;
+  z-index: -1;
 }
 
 /* 通知 */
@@ -30,47 +52,73 @@
   background-color: transparent !important;
   backdrop-filter: blur(20px) brightness(110%);
   div {
-    /* 为通知内部容器添加透明支持 */
-    background-color: transparent !important;
+      /* 为通知内部容器添加透明支持 */
+      background-color: transparent !important;
   }
 }
 
 /* 为分割页面容器添加透明支持 */
 .part.panel.basepanel.bottom.pane-composite-part {
   .composite.title.has-composite-bar {
-    border-top-left-radius: 18px;
-    border-top-right-radius: 18px;
+      /* border-top-left-radius: 18px;
+      border-top-right-radius: 18px; */
+      border: none;
   }
 }
 
 .overflowingContentWidgets {
   /* 代码提示框 */
   .editor-widget.suggest-widget {
-    /* padding: 0.2rem 0.4rem !important; */
-    border-radius: 12px !important;
-    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2) !important;
-    background-color: transparent !important;
-    backdrop-filter: blur(12px) brightness(120%);
+      /* padding: 0.2rem 0.4rem !important; */
+      border-radius: 4px !important;
+      box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2) !important;
+      outline: none !important;
+  }
+
+  .editor-widget.suggest-widget::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: block;
+      background-color: transparent !important;
+      backdrop-filter: blur(12px) brightness(120%);
   }
 }
 /* 鼠标悬停在代码上的提示框 */
 .monaco-hover:not(.hidden) {
   /* padding: 1em 2em !important; */
-  font-family: "FiraCode Nerd Font,Consolas, 'Courier New', monospace";
+  font-family: 'CaskaydiaCove Nerd Font, DFGirl, LXGW WenKai GB Screen;';
   border: 1px solid rgb(36, 40, 48) !important;
   box-shadow: 0 0 8px 2px rgb(32, 36, 42) !important;
-  border-radius: 12px !important;
+  border-radius: 4px !important;
   background-color: rgba(40, 44, 52, 0.2) !important;
   backdrop-filter: blur(8px) brightness(120%);
+  outline: none !important;
 }
 
 /* 代码提示框行的提示框 */
 .overflowingOverlayWidgets {
   .suggest-details {
-    /* padding: 0.2rem 0.4rem !important; */
-    border-radius: 12px !important;
-    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2) !important;
-    background-color: transparent !important;
-    backdrop-filter: blur(12px) brightness(120%);
+      /* padding: 0.2rem 0.4rem !important; */
+      border-radius: 12px !important;
+      /* box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2) !important; */
+      /* background-color: transparent !important; */
+      backdrop-filter: blur(12px) brightness(120%);
+      outline: none !important;
+  }
+
+  .suggest-details::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: block;
+      background-color: transparent !important;
+      backdrop-filter: blur(12px) brightness(120%);
   }
 }
