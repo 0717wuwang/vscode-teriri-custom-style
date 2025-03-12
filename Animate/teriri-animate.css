@@ -229,7 +229,6 @@ div.monaco-editor .find-widget {
 }
 
 /* 右键菜单-活动栏 */
-
 .monaco-menu-container::after {
   content: '';
   position: absolute;
@@ -243,6 +242,29 @@ div.monaco-editor .find-widget {
   border-radius: 6px;
   animation: 300ms ease forwards !important;
   z-index: -1;
+}
+
+/* 右键菜单-编辑器 */
+:host-context(.monaco-menu-container) {
+  background-color: transparent !important;
+  backdrop-filter: blur(20px) brightness(120%);
+  border-radius: 6px;
+  animation: 300ms ease forwards !important;
+}
+
+.shadow-root-host .monaco-menu-container {
+  /* content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block; */
+  background-color: transparent !important;
+  backdrop-filter: blur(20px) brightness(120%);
+  border-radius: 6px;
+  animation: 300ms ease forwards !important;
+  /* z-index: -1; */
 }
 
 @keyframes rightClickMenuFadeBigIn {
@@ -289,6 +311,9 @@ div.sticky-widget {
   .editor-widget.suggest-widget {
       transition: top 100ms ease, left 300ms ease, top 300ms, height 300ms;
       animation: fadeBigIn 100ms ease;
+  }
+  .contents {
+      padding-left: 8px !important;
   }
   /* 鼠标悬停在代码上的提示框 */
   .monaco-hover:not(.hidden) {
